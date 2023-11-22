@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1",
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.19.0"
+  },
+  "scripts": {
+    "dev": "concurrently npm:dev:client npm:dev:server",
+    "dev:client": "cd .. && cd client && npm run dev",
+    "dev:server": "cd .. && cd server && nodemon server.js",
+    "build": "parcel build index.html"
+  },
+  "type": "module"
+}
